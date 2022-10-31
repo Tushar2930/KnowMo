@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/post_input.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+
+<div id="abc">
+<div class="post-hidden-form" id="myForm">
+    <div class="post-form-head"><div><h2>CREATE POST</h2></div>
+    <div style="width: 9%;"><img onclick="closeForm()" class="closeIcon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" alt=""></div></div>
+
+    
+<form action="/posts/create" enctype="multipart/form-data" method="POST">
+   <div class="head"><div class="avatar-1">
+        <a href="/users/profile/<%=user.id%>">
+            <img class="avatar-1" src="<%=user.avatar%>" alt="username">
+        </a>
+    </div>
+    <div class="post-heading">
+        <h5><%=user.name%></h5>
+    </div></div>
+    <textarea name="content" id="data" cols="30" rows="3" placeholder="What's on your mind..."></textarea>
+    <div class="image-upload">
+        <input id="file-input" type="file" name="postimg">
+        <button type="submit">POST</button>
+    </div>
+    
+</form>
+</div>
+</div>

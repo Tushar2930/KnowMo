@@ -1,0 +1,94 @@
+.avatar-1{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+}
+
+.post-head{
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 1rem 0rem;
+}
+.post-heading{
+    margin: 0rem 1rem;
+    height: 32%;
+    // width: 75%;
+    display: flex;
+    width: 82%;
+    justify-content: space-between;
+    
+}
+h5{
+    margin-bottom: 0px;
+}
+small{
+   color: #676a79;
+}
+.img-head{
+    width: 90%;
+    
+
+}
+.post-body{
+    display: flex;
+    justify-content: center;
+}
+
+.post-image{
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.post-footer{
+    border-top: solid 1px #e4e6eb;
+    margin: 1rem;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.post-icons{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.post-icons:hover{
+    background-color: #eceff3;
+}
+
+button{
+    border: none;
+    background-color: white;
+}
+.comment-form{
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 1rem 0rem
+}
+
+.comment-input{
+    background-color:#EDF0F4;
+    margin-left: 0.5rem;
+    width: 87%;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#commentpf{
+    display: none;
+}
+
+.edit-icon{
+
+    height: 1.3rem;
+    width: 1.3rem;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}

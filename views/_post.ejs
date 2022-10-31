@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+<div class="post-main">
+    <div class="post-head">
+        <div class="avatar-1">
+            <a href="/users/profile/<%=post.user.id%>">
+                <img class="avatar-1" src="<%=post.user.avatar%>" alt="username">
+            </a>
+        </div>
+        <div class="post-heading">
+            <div>
+            <h5><%= post.user.name %></h5>
+            <small>Web devloper</small></div>
+            <div class="btn-group" role="group" style="height: 1.3rem;
+            width: 1.3rem;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" style="     background-color: white;   height: 100%;
+                width: 100%;
+                padding: 0px;
+                border: none;" data-toggle="dropdown" aria-expanded="false">
+                    <img src="/images/threedots.png" style="    height: 100%;
+                    width: 100%;" alt="">
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="/posts/destroy/<%=post.id%>">Delete</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="post-body">
+        <div class="img-head">
+        <div><p><%=post.content%></p></div>
+        <div><img class="post-image" src="<%=post.postimg%>" alt=""></div></div>
+    </div>
+    <div class="post-footer">
+        <div class="post-icons"><button><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> </div>
+        <div class="post-icons" onclick="opencommets()"><i class="fa-regular fa-comment fa-2xl"></i> &nbsp;&nbsp;Comment &nbsp;</div>
+        <div class="post-icons"><i class="fa-sharp fa-solid fa-share fa-2xl"></i>&nbsp;&nbsp; Share&nbsp; </div>
+    </div>
+    <div id="commentpf"> <div>
+        <%if(locals.user){%>
+        <form action="/comments/create" class="comment-form" method="POST">
+            <div class="avatar">
+                <a href="/users/profile/<%=user.id%>">
+                    <img class="avatar" src="<%=post.user.avatar%>" alt="username">
+                </a>
+            </div>
+            <input type="text" name="content" id="cinpdata" class="comment-input" placeholder="Add comment...">
+            <input type="hidden" name="post" value="<%= post._id %>" >
+            <button type="submit" style="display: none;" class="submit-button" id="myBtn"></button>
+        </form>
+        <%}%>
+    </div>
+    <div class="show-comments">
+            <%for(comment of post.comments){%>
+                <%- include('_comment')-%>
+                    <%}%>
+    </div>
+    </div>
+</div>
+

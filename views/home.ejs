@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/css/home-style.css">
+<link rel="icon" href="/images/icon (1).png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/left-bar.css">
+<script src="/js/particles.js"></script>
+<script src="/js/app.js"></script>
+
+<div class="main-body">
+    <main>
+        <div class="container">
+
+
+
+
+            <div class="left-side">
+                <div class="userimage">
+                    <div class="backcover">
+                        
+                    </div><div class="headEr">
+                    <div class="imgp">
+                        <img src="<%=user.avatar%>" alt="<%=user.name%>">
+                    </div>
+                
+                <div class="user-name">
+                    <%=user.name%>
+                </div>
+            </div>
+            </div>
+            <div style="padding: 1rem;"><p style="text-align: center;">I'd love to change the world, but they won’t give me the source code.</p></div>
+            </div>
+
+
+
+
+
+            <div class="post-content gap-4">
+                <div class="post-input">
+                    <div class="input-1">
+                        <div class="avatar">
+                        <a href="/users/profile/<%=user.id%>">
+                            <img class="avatar" src="<%=user.avatar%>" alt="username">
+                        </a>
+                    </div>
+                    <div class="post-form">
+                        <form>
+                            <textarea class="post-input-form" onclick="openForm()" oninput="auto_grow(this)" rows="1" placeholder="&nbsp;Share your thoughts..."></textarea>
+                        </form>
+                        <%- include('post_input_form') -%>
+                    </div>
+                    </div>
+                    <div class="input-2"> 
+                        <ul class="icons">
+                            <li class="icons-items">Photos</li>
+                            <li class="icons-items">Photos</li>
+                            <li class="icons-items">Photos</li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="posts">
+                        <div>
+                               <%for(post of posts){%>
+                                    <%- include('_post')-%> 
+                                       <%}%>
+                        </div>
+                    </div>
+                
+               
+            </div>
+            <div class="right-side"></div>
+        </div>
+    </main>
+</div>

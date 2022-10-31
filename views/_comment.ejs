@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/comment.css">
+
+<div class="comment">
+    <div class="avatar">
+        <a href="/users/profile/<%=user.id%>">
+            <img class="avatar" src="<%=comment.user.avatar%>" alt="username">
+        </a>
+    </div>
+    <div class="comment-content">
+        <div class="comment-head" style="display: flex; justify-content: space-between;"><h6><%=comment.user.name%></h6>
+            <%if(locals.user && locals.user.id==comment.user.id){%>
+        <div class="btn-group" role="group" style="height: 1rem;
+            width: 1rem;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" style="     background-color: #edf0f4;   height: 100%;
+                width: 100%;
+                padding: 0px;
+                border: none;" data-toggle="dropdown" aria-expanded="false">
+                    <img src="/images/threedots.png" style="    height: 100%;
+                    width: 100%;" alt="">
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="/comments/destroy/<%=comment.id%>">Delete</a>
+                </div>
+              </div>
+              <%}%></div>
+        <div class="comment-data"><p><%=comment.content%></p></div>
+
+    </div>
+   
+</div>

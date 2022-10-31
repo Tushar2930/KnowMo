@@ -1,0 +1,25 @@
+.comment-content{
+    background-color: #EDF0F4;
+    margin-left: 0.5rem;
+    width: 87%;
+    border: none;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0rem;
+    padding: 1rem;
+    h6{
+        font-weight: 700;
+        font-family: monospace;
+    }
+}
+
+.comment{
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 1rem 0rem;
+}
+.comment-data{
+
+    p{
+        margin-bottom: 0px;
+    }
+}
