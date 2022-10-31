@@ -12,8 +12,10 @@
             <div>
             <h5><%= post.user.name %></h5>
             <small>Web devloper</small></div>
+            
             <div class="btn-group" role="group" style="height: 1.3rem;
             width: 1.3rem;">
+            <% if(user.id==post.user.id){%>
                 <button type="button" class="btn btn-secondary dropdown-toggle" style="     background-color: white;   height: 100%;
                 width: 100%;
                 padding: 0px;
@@ -21,10 +23,13 @@
                     <img src="/images/threedots.png" style="    height: 100%;
                     width: 100%;" alt="">
                 </button>
+                
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" onclick="openEditForm()" >Edit</a>
                   <a class="dropdown-item" href="/posts/destroy/<%=post.id%>">Delete</a>
                 </div>
+                <%- include('post-edit-form') -%>
+                <%}%>
               </div>
         </div>
     </div>

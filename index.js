@@ -12,6 +12,7 @@ const MongoStore = require('connect-mongo');
 const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const keys = require('./config/keys');
+var bodyParser = require('body-parser')
 
 
 
@@ -26,6 +27,8 @@ app.use(sassMiddleware({
 app.use(express.urlencoded());
 app.use(cookieParser());
 
+app.use(bodyParser.urlencoded({extended: true})); 
+  app.use( bodyParser.json()); 
 
 app.use(express.static('./assets'));
 app.use('/uploads', express.static(__dirname + '/uploads'));
