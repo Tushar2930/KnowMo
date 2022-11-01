@@ -51,7 +51,7 @@
                     <img class="avatar" src="<%=post.user.avatar%>" alt="username">
                 </a>
             </div>
-            <input type="text" name="content" id="cinpdata" class="comment-input" placeholder="Add comment...">
+            <input type="text" name="content" id="cinpdata" class="comment-input" required placeholder="Add comment...">
             <input type="hidden" name="post" value="<%= post._id %>" >
             <button type="submit" style="display: none;" class="submit-button" id="myBtn"></button>
         </form>

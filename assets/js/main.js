@@ -1,20 +1,32 @@
-// const element =document.querySelector(".post-input-form");
-function openForm() {
-    document.getElementById('abc').style.display = "block";
-    }
-    function openEditForm() {
-      document.getElementById('abcd').style.display = "block";
-      }
+
+function openForm()
+ {
+  document.getElementById('abc').style.display = "block";
+  }
+
+function openEditForm() {
+  document.getElementById('abcd').style.display = "block";
+  }
     //Function to Hide Popup
-    function closeForm(){
-    document.getElementById('abc').style.display = "none";
-    }
-    function openAnswersForm() {
-      document.getElementById('def').style.display = "block";
-      }
-      function closeAnswersForm(){
-        document.getElementById('def').style.display = "none";
-        }
+function closeForm(){
+document.getElementById('abc').style.display = "none";
+}
+
+function openQuestionsForm() {
+  document.getElementById('def').style.display = "block";
+  }
+
+function closeQuestionsForm(){
+  document.getElementById('def').style.display = "none";
+  }
+
+function openAnswersForm() {
+  document.getElementById('answer-f').style.display = "block";
+  }
+
+function closeAnswersForm(){
+  document.getElementById('answer-f').style.display = "none";
+  }
 
 var input = document.getElementById("cinpdata");
 

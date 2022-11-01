@@ -23,7 +23,7 @@
         </div>
         <div class="post-form">
             <form>
-                <textarea class="post-input-form" onclick="openAnswersForm()" oninput="auto_grow(this)" rows="1" placeholder="&nbsp;Ask Your Questions..."></textarea>
+                <textarea class="post-input-form" onclick="openQuestionsForm()" oninput="auto_grow(this)" rows="1" placeholder="&nbsp;Ask Your Questions..."></textarea>
             </form>
             <%- include('questions_input-form') -%>
         </div>
@@ -39,13 +39,12 @@
         <%for(question of questions){%>
             <%- include('question') -%>
             <%}%>
-        </div>
+        
     </div>
-
+</div>
 
 
 
 
 
     <div style="background-color: white;" class="ans-right-col"></div>
-</div>

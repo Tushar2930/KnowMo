@@ -32,5 +32,5 @@ module.exports.create=async function(req,res){
         content:req.body.content,
         user:req.user._id
     });
-    return res.redirect('/answers');
+    return res.redirect('/questions');
 }
