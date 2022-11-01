@@ -9,7 +9,7 @@ const questionSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    answer: [
+    answers: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Answer'

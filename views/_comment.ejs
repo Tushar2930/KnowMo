@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="/css/comment.css">
 
-<div class="comment">
+
+<div class="comment" id="<%=comment.id%>">
     <div class="avatar">
         <a href="/users/profile/<%=user.id%>">
             <img class="avatar" src="<%=comment.user.avatar%>" alt="username">
@@ -19,12 +19,12 @@
                     width: 100%;" alt="">
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" onclick="editComments('<%=comment.id%>')" href="#">Edit</a>
                   <a class="dropdown-item" href="/comments/destroy/<%=comment.id%>">Delete</a>
                 </div>
               </div>
               <%}%></div>
-        <div class="comment-data"><p><%=comment.content%></p></div>
+        <div class="comment-data" id="required-data"><p><%=comment.content%></p></div>
 
     </div>
    

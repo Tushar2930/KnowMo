@@ -1,0 +1,30 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+
+<div id="def">
+<div class="answer-hidden-form" id="myForm">
+    <div class="post-form-head"><div><h2 id="h12">ASK QUESTION</h2></div>
+    <div style="width: 9%;"><img onclick="closeAnswersForm()" class="closeIcon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" alt=""></div></div>
+
+    
+<form action="/answers/create" method="POST" id="form-post-data">
+   <div class="head"><div class="avatar-1">
+        <a href="/users/profile/<%=user.id%>">
+            <img class="avatar-1" src="<%=user.avatar%>" alt="username">
+        </a>
+    </div>
+    <div class="post-heading">
+        <h5><%=user.name%></h5>
+    </div></div>
+    <textarea name="content" id="data" cols="30" rows="3" placeholder="Type your Question..."></textarea>
+        <div style="    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7%;
+        width: 100%;"><button class="answer-button" type="submit">POST</button></div>
+    </div>
+    
+</form>
+</div>
+</div>

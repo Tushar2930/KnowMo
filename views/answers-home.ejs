@@ -1,0 +1,51 @@
+
+<div class="container bg-grey">
+    <div style="background-color: white;" class="ans-left-col">
+    <h4>Questions</h4><hr>
+    <div class="left-col-ans">
+    <a href=""><h6>Questions for you</h6></a>
+    <a href=""><h6>Your Questions</h6></a>
+    <a href=""><h6>Your Answers</h6></a>
+    <a href=""><h6>Starred</h6></a>
+</div>
+</div>
+
+
+
+
+
+    <div  class="ans-mid-col"><div class="post-input">
+        <div class="input-1">
+            <div class="avatar">
+            <a href="/users/profile/<%=user.id%>">
+                <img class="avatar" src="<%=user.avatar%>" alt="username">
+            </a>
+        </div>
+        <div class="post-form">
+            <form>
+                <textarea class="post-input-form" onclick="openAnswersForm()" oninput="auto_grow(this)" rows="1" placeholder="&nbsp;Ask Your Questions..."></textarea>
+            </form>
+            <%- include('questions_input-form') -%>
+        </div>
+        </div>
+        <!-- <div class="input-2"> 
+            <ul class="icons">
+                <li class="icons-items">Photos</li>
+                <li class="icons-items">Photos</li>
+                <li class="icons-items">Photos</li>
+            </ul>
+        </div> -->
+        <div class="questions-container">
+        <%for(question of questions){%>
+            <%- include('question') -%>
+            <%}%>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div style="background-color: white;" class="ans-right-col"></div>
+</div>

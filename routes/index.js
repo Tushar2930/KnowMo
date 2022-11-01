@@ -8,6 +8,6 @@ router.get('/', passport.checkAuthentication, homeController.home);
 router.use('/users', require('./users'));
 router.use('/posts',require('./posts'));
 router.use('/comments',require('./comments'));
-router.use('/answers',require('./answers'));
+router.use('/answers',require('./questions'));
 
 module.exports = router;

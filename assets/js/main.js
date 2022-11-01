@@ -9,6 +9,12 @@ function openForm() {
     function closeForm(){
     document.getElementById('abc').style.display = "none";
     }
+    function openAnswersForm() {
+      document.getElementById('def').style.display = "block";
+      }
+      function closeAnswersForm(){
+        document.getElementById('def').style.display = "none";
+        }
 
 var input = document.getElementById("cinpdata");
 
@@ -23,3 +29,11 @@ input.addEventListener("keypress", function(event) {
 function opencommets(){
   document.getElementById('commentpf').style.display = "block";
 } 
+
+function editComments(e){
+  const data=document.getElementById("required-data").innerText;
+  console.log(data);
+  document.getElementById("cinpdata").value=data;
+  document.getElementById(e).remove();
+  
+}

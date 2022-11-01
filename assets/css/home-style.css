@@ -1,4 +1,4 @@
-@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
 
 .main-body {
     background-color: #EDF0F4;
@@ -53,9 +53,13 @@
     height: 86%;
     display: flex;
     box-shadow: none;
-    background-color: #EDF0F4;
+    /* background-color: #EDF0F4; */
 
 }
+.bg-grey{
+    background-color: #EDF0F4;
+}
+
 
 .temp {
     height: 100px;

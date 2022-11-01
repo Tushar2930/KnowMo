@@ -1,0 +1,40 @@
+.ans-left-col {
+  height: 100%;
+  width: 23%;
+  border-radius: 0.4rem; }
+  .ans-left-col .left-col-ans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .ans-left-col h4 {
+    text-align: center;
+    margin-top: 1rem; }
+  .ans-left-col h6 {
+    margin: 0.3rem;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .ans-left-col a {
+    color: black; }
+
+h6:hover {
+  background-color: #edf0f4; }
+
+.ans-mid-col {
+  height: 100%;
+  width: 50%;
+  margin: 0rem 2rem;
+  border-radius: 0.4rem;
+  overflow-y: scroll; }
+
+.ans-mid-col::-webkit-scrollbar {
+  display: none; }
+
+.ans-right-col {
+  height: 100%;
+  width: 23%;
+  border-radius: 0.4rem; }
