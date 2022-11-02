@@ -24,6 +24,7 @@ module.exports.create=async function(req,res){
 }
 
 module.exports.viewAnswer=async function(req,res){
+    let ques=await Questions.find({});
     let question=await Questions.findById(req.params.id)
     .populate('user')
     .populate({
@@ -35,7 +36,8 @@ module.exports.viewAnswer=async function(req,res){
 
     return res.render('show_answers',{
         title:question.content,
-        question:question
+        question:question,
+        all_questions:ques
     })
     
 }

@@ -44,3 +44,9 @@
 
 i:hover {
   background-color: #edf0f4; }
+
+.answer-right {
+  padding: 1rem; }
+
+.ques-link:hover {
+  background-color: #edf0f4; }

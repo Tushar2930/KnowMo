@@ -47,7 +47,14 @@
                 
         </div>
     </div>
-    <div class="answer-right"></div>
+    <div class="answer-right">
+        <h4 style="text-align: center;">Other Questions</h4>
+        <hr>
+        <%for(item of all_questions){%>
+            <%if(item.content!==question.content){%>
+                <div class="ques-link" style=" font-size: large;   padding: 0.5rem 0rem;"><a href="/answers/view/<%=item.id%>"><%=item.content%></a></div>
+            <%}%><%}%>
+    </div>
 
 
 
