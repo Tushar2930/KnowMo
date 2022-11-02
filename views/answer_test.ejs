@@ -1,0 +1,25 @@
+<!-- answer.anything -->
+<div class="display-answers" style="background-color: white;">
+    <div class="display-answer-head flex-centre">
+        <div class="avatar-1">
+            <a href="/users/profile/<%=answer.user.id%>">
+                <img class="avatar-1" src="<%=answer.user.avatar%>" alt="username">
+            </a>
+        </div>
+        <div>
+            <h4><%=answer.user.name%></h4>
+        </div>
+    </div>
+    <div class="display-answer-content">
+        <h5><%=answer.content%></h5>
+    </div>
+    <div class="display-answer-foot" style="display: flex;height: 10%; justify-content: space-between;
+    align-items: center;">
+        <div class="flex-centre" style="height: 100%;">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4 3 15h6v5h6v-5h6z" class="icon_svg-stroke icon_svg-fill" stroke-width="1.5" stroke="#666" fill="none" stroke-linejoin="round"></path></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 20 9-11h-6V4H9v5H3z" class="icon_svg-stroke icon_svg-fill" stroke="#666" fill="none" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+    </div>
+    <div><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g class="icon_svg-stroke" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M19.748 10a8.003 8.003 0 0 0-15.496.002m.001 4.003a8.003 8.003 0 0 0 15.494 0"></path><path d="m2.5 7.697 1.197 3.289 3.289-1.197m14.5 6.5L20.289 13 17 14.197"></path></g></svg></div>
+    </div>
+</div>
+

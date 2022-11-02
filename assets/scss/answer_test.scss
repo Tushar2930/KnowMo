@@ -1,0 +1,23 @@
+.display-answers{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.display-answer-content{
+    margin: 1rem;
+}
+
+.display-answer-foot{
+
+    svg{
+        height: 100%;
+        /* margin: 0.5rem; */
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 2rem;
+    }
+}
+
+svg:hover{
+    background-color: #edf0f4;
+}

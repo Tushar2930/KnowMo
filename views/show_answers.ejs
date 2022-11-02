@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/show_answers.css">
+<div class="container bg-grey">
+    <div class="answer-left">
+        <div class="question-main" style="     border-radius: 0.4rem;padding: 1rem;">
+            <div class="answer-question-head">
+               <div class="flex-centre"> <div class="avatar-1">
+                    <a href="/users/profile/<%=question.user.id%>">
+                        <img class="avatar-1" src="<%=question.user.avatar%>" alt="username">
+                    </a>
+                </div>
+                <div class="answer-q-heading"><h4><%=question.user.name%></h4></div></div>
+                <div class="btn-group option-bar" role="group" style="height: 1.3rem;
+            width: 1.3rem;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" style="     background-color: white;   height: 100%;
+                width: 100%;
+                color: black;
+                padding: 0px;
+                border: none;" data-toggle="dropdown" aria-expanded="false">
+                   <i class="fa-solid fa-ellipsis" style="font-size: 1.3rem;"></i>
+                </button>
+                
+                <div class="dropdown-menu">
+                  <a class="dropdown-item"  >Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="answer-question-content">
+                <h2><%=question.content%></h2>
+            </div>
+
+
+            <div class="answer-question-foot">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-regular fa-star"></i>
+                
+            </div></div>
+            <div class="answers-container">
+                <%for(answer of question.answers){%>
+                    <%- include('answer_test')-%>
+                    <%}%>
+                
+                
+        </div>
+    </div>
+    <div class="answer-right"></div>
+
+
+
+</div>

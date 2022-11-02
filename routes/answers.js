@@ -4,6 +4,7 @@ const router = express.Router();
 const passport=require('passport');
 const answerController=require('../controllers/answers_controller');
 
-router.post('/create',answerController.create);
+router.get('/view/:id',passport.checkAuthentication,answerController.viewAnswer);
+router.post('/create',passport.checkAuthentication,answerController.create);
 
 module.exports = router;

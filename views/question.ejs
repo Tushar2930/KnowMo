@@ -2,7 +2,7 @@
 <div class="questions-main" style="margin-top: 1.8rem;    border-radius: 0.4rem;">
 <div class="question-head">
     <div><h5><%=question.content%></h5>
-    <a href=""><small><%=question.answers.length%> Answers</small></a></div>
+    <a href="/answers/view/<%=question.id%>"><small><%=question.answers.length%> Answers</small></a></div>
     <%if(locals.user && locals.user.id==question.user.id){%>
         <div class="btn-group" role="group" style="    height: 5%;
         width: 5%;">
@@ -10,8 +10,8 @@
                 width: 100%;
                 padding: 0px;
                 border: none;" data-toggle="dropdown" aria-expanded="false">
-                    <img src="/images/threedots.png" style="    height: 100%;
-                    width: 100%;" alt="">
+                    <i class="fa-solid fa-ellipsis" style="font-size: 1.3rem;"></i>
+                  </button>
                 </button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Edit</a>
