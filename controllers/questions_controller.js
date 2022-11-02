@@ -34,3 +34,19 @@ module.exports.create=async function(req,res){
     });
     return res.redirect('/questions');
 }
+
+module.exports.destroy=async function(req,res){
+    try {
+        let question=await Questions.findById(req.params.id);
+        if(question.user==req.user.id){
+            question.remove();
+
+            await Answers.deleteMany({question:req.params.id});
+            return res.redirect('/questions');
+        }
+        return res.redirect('/questions'); 
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
