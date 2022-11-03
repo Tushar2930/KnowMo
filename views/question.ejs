@@ -1,8 +1,8 @@
 <div>
 <div class="questions-main" style="margin-top: 1.8rem;    border-radius: 0.4rem;">
 <div class="question-head">
-    <div><h5><%=question.content%></h5>
-    <a href="/answers/view/<%=question.id%>"><small><%=question.answers.length%> Answers</small></a></div>
+  <div><a href="/answers/view/<%=question.id%>" style="color: black;"><h5><%=question.content%></h5>
+    <small><%=question.answers.length%> Answers</small></a></div>
     <%if(locals.user && locals.user.id==question.user.id){%>
         <div class="btn-group" role="group" style="    height: 5%;
         width: 5%;">

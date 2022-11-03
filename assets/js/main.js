@@ -49,3 +49,9 @@ function editComments(e){
   document.getElementById(e).remove();
   
 }
+
+function showall(){
+  document.getElementById("other-questions").style.height="100%";
+  document.querySelector('.answer-right').style.height='auto';
+  document.getElementById("other-questions").style.overflow="visible";
+}

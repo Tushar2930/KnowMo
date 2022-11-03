@@ -50,3 +50,8 @@ module.exports.destroy=async function(req,res){
         console.log(error);
     }
 }
+
+module.exports.myQuestions=function(req,res){
+
+    res.send('hello')
+}
