@@ -55,3 +55,7 @@ function showall(){
   document.querySelector('.answer-right').style.height='auto';
   document.getElementById("other-questions").style.overflow="visible";
 }
+
+function hideQuestion(ei){
+ document.getElementById(ei).style.display="none";
+}

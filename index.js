@@ -51,7 +51,7 @@ app.use(session({
         maxAge: (1000 * 60 * 100)
     },
     store: MongoStore.create({
-        mongoUrl: process.env.db,
+        mongoUrl: keys.db,
         autoRemove: 'disabled'
     },
         function (err) {

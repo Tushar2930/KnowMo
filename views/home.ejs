@@ -21,7 +21,11 @@
                 </div>
             </div>
             </div>
-            <div style="padding: 1rem;"><p style="text-align: center;">I'd love to change the world, but they won’t give me the source code.</p></div>
+            <div style="    padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;"><p style="text-align: center;">3rd Year</p><p>IIT BHU</p></div>
             </div>
 
 
@@ -61,7 +65,28 @@
                 
                
             </div>
-            <div class="right-side"></div>
+            <div class="right-side">
+                <div class="follow-head">People to follow</div>
+                <div class="followers-container">
+                    <%for(user of all_users){%>
+                        <div class="follower-item">
+                            <div class="avatar-1 follower-image">
+                                <a href="/users/profile/<%=user.id%>">
+                                    <img class="avatar-1" src="<%=user.avatar%>" alt="username">
+                                </a>
+                            </div>
+                            <div class="post-heading follower-name">
+                                <div>
+                                <h5 style="font-size: 1rem;"><%=user.name %></h5>
+                                <small>Web devloper</small></div>
+                                  </div>
+                                  <div style="display: flex;
+                                  justify-content: center;
+                                  align-items: center;" class="follow-btn"><i class="fa-regular fa-plus add-btn"></i></div>
+                        </div>
+                        <%}%>
+                </div>
+            </div>
         </div>
     </main>
 </div>

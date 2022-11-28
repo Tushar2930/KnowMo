@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const keys = require('./keys');
 
-mongoose.connect(process.env.db);
+mongoose.connect(keys.db);
 
 const db = mongoose.connection;
 

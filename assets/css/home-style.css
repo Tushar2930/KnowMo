@@ -154,3 +154,43 @@ a{
     margin: 1.5rem 0rem;
     border-radius: 0.5rem;
 }
+
+.follow-head{
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1.5rem 1rem;
+    font-family: sans-serif;
+}
+
+.follower-item{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0rem;
+}
+
+.follower-image{
+height: 100%;
+}
+
+.follower-name{
+    margin: 0rem 0rem;
+    width: 50%;
+    margin: 0.2rem 0rem;
+}
+
+.follow-btn{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    color: #0F6FEC;
+    background-color: rgba(15, 111, 236, 0.1);
+}
+
+.follow-btn:hover{
+    background-color: #0F6FEC;
+    color: white;
+}
+

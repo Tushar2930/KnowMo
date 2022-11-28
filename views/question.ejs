@@ -1,4 +1,4 @@
-<div>
+<div id="<%=question.id%>">
 <div class="questions-main" style="margin-top: 1.8rem;    border-radius: 0.4rem;">
 <div class="question-head">
   <div><a href="/answers/view/<%=question.id%>" style="color: black;"><h5><%=question.content%></h5>
@@ -24,7 +24,7 @@
 <div class="question-nav-icons">
     <div class="icons-qu" onclick="openAnswersForm()"><i class="fa-regular fa-5x fa-pen-to-square"></i><h6>Answer</h6></div>
     <div class="icons-qu"><i class="fa-sharp fa-solid fa-star" style="font-weight: 0;"></i><h6>Star</h6></div>
-    <div class="icons-qu"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjST8hY84yqtGLJJjmRZEJjyI_9g35cuD_rkkDrAXRtMQVGL4d2eiCVtH3xcXTHOGbuPQ&usqp=CAU" alt=""><h6>Pass</h6></div>
+    <div class="icons-qu" onclick='hideQuestion("<%=question.id%>")'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjST8hY84yqtGLJJjmRZEJjyI_9g35cuD_rkkDrAXRtMQVGL4d2eiCVtH3xcXTHOGbuPQ&usqp=CAU" alt=""><h6>Pass</h6></div>
 
 </div>
 <%-include('answers_input_form')-%>
