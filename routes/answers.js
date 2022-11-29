@@ -6,5 +6,6 @@ const answerController=require('../controllers/answers_controller');
 
 router.get('/view/:id',passport.checkAuthentication,answerController.viewAnswer);
 router.post('/create',passport.checkAuthentication,answerController.create);
+router.get('/my-answers',passport.checkAuthentication,answerController.myAnswers);
 
 module.exports = router;

@@ -41,3 +41,7 @@ module.exports.viewAnswer=async function(req,res){
     })
     
 }
+
+module.exports.myAnswers=async function(req,res){
+    
+}

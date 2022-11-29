@@ -1,8 +1,10 @@
-
+body{
+    height: 100vh;
+}
 
 .main-body {
     background-color: #EDF0F4;
-    height: 100vh;
+    height: 87%;
     width: 98vw;
 }
 
@@ -50,12 +52,16 @@
 .container {
     margin-top: 2rem;
     margin-bottom: -6rem;
-    height: 86%;
+    height: 100%;
     display: flex;
     box-shadow: none;
     /* background-color: #EDF0F4; */
 
 }
+.ans-cnt{
+    height: 86%;
+}
+
 .bg-grey{
     background-color: #EDF0F4;
 }

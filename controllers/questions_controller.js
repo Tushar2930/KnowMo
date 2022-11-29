@@ -51,7 +51,24 @@ module.exports.destroy=async function(req,res){
     }
 }
 
-module.exports.myQuestions=function(req,res){
+module.exports.myQuestions=async function(req,res){
 
-    res.send('hello')
+    try {
+        let questions=await Questions.find({})
+        .sort('-createdAt')
+        .populate('user')
+        .populate({
+            path:'answers',
+            populate: {
+                path: 'user',
+            }
+        });
+        return res.render("your-questions",{
+            title:"Your Questions",
+            questions:questions
+        })
+    } catch (error) {
+        console.log(error);
+    }
+   
 }
