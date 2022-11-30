@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports.createSession = function (req, res) {
-    console.log("done");
-    return res.redirect('/');
+    console.log(`/users/profile/${req.user.id}`);
+    return res.redirect(`/users/profile/${req.user.id}`);
 }
 
 module.exports.signup = function (req, res) {
@@ -38,7 +38,7 @@ module.exports.create = function (req, res) {
 
         if (!user) {
             User.create(req.body, function (err, user) {
-                if (err) { console.log('error in finding user in signing up'); return }
+                if (err) { console.log('error in finding user in signing up',err); return }
 
                 return res.redirect('/users/sign-in');
             })
@@ -72,6 +72,8 @@ module.exports.update=async function(req,res){
 
                 user.name = req.body.name;
                 user.email = req.body.email;
+                user.year=req.body.year;
+                user.collegeName=req.body.collegeName;
                 if (req.file) {
                     if (user.avatar) {
 

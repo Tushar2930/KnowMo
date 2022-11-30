@@ -1,17 +1,50 @@
-<div>
-    <h1>
-        Codeial / Profile Page
-    </h1>
-    <img src="<%=user.avatar%>" alt="<%=user.name %>" width="100">
-
+<div class="container profile-body">
     <% if(user.id==profile_user.id){%>
 
-        <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST">
-            <input type="text" name="name" placeholder="Your Name" value="<%=profile_user.name%>">
-            <input type="text" name="email" placeholder="Your Email" value="<%=profile_user.email%>">
-            <input type="file" name="avatar" placeholder="Profile picture">
-            <input type="submit">
+        <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" style="    display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;">
+           <div class="pro-left">
+                <h2><%=profile_user.name%></h2>
+                <img src="<%=user.avatar%>" alt="<%=user.name %>" width="100">
+                <label style="position: inherit;    margin: 1rem 1rem;">
+                    <div style="padding: 0.5rem;
+                    border: 1px solid orange;
+                    background-color: orange;
+                    color: white;    font-size: 1.1rem;">Upload New Photo</div>
+                    <input type="file" name="avatar" placeholder="Profile picture" class="avatar-photu" style="display: none;">
+                   </label>
+                   <div style="text-align: center;
+                   background-color: #ebffff;
+                   border: 1px solid #a2d4ff;
+                   font-size: smaller;
+                   width: 70%;
+               ">Upload a new avatar.Larger image will be resized automatically</div>
+                
 
+            </div>
+            <div class="pro-right">
+                <div style="    height: 15%;
+                font-size: xx-large;
+                padding: 1rem 1.5rem;
+                color: white;
+                background-color: #FFA500;
+                font-weight: bold;">Edit Profile</div>
+                <div class="input-data-div">
+                    <h4>Name</h4><input type="text" name="name" placeholder="Your Name" value="<%=profile_user.name%>">
+                    <h4>Email</h4><input type="text" name="email" placeholder="Your Email" value="<%=profile_user.email%>">
+                    <h4>Year</h4><input type="number" name="year" placeholder="Graduation Year" required value="<%=profile_user.year%>">
+                    <h4>College Name</h4><input type="text" name="collegeName" placeholder="Enter Your College Name..." required value="<%=profile_user.collegeName%>">
+                    <input type="submit" placeholder="Update Info" style="    width: 30%;
+                    padding: -0.5rem;
+                    margin: 2rem 0rem;
+                    background-color: orange;
+                    color: white;
+                    font-size: 1.4rem;
+                    font-weight: 700;">
+                </div>
+            </div>
         </form>
 
         <%} else{%>

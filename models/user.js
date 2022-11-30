@@ -19,6 +19,12 @@ const userSchema = new mongoose.Schema({
     },
     avatar: {
         type: String
+    },
+    year:{
+        type:String,
+    },
+    collegeName:{
+        type:String,
     }
 }, {
     timestamps: true
