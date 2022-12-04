@@ -1,12 +1,15 @@
 .ans-left-col {
-  height: 40%;
+  height: fit-content;
   width: 23%;
   border-radius: 0.4rem; }
+  .ans-left-col hr {
+    margin-bottom: 0px; }
   .ans-left-col .left-col-ans {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 1rem; }
   .ans-left-col h4 {
     text-align: center;
     margin-top: 1rem; }

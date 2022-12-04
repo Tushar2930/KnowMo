@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const Post=require('../models/posts');
 const Comment=require('../models/comments');
+const Like=require('../models/likes');
 
 
 
@@ -34,6 +35,9 @@ module.exports.destroy=async function(req,res){
     try {
         let post=await Post.findById(req.params.id);
         if(post.user==req.user.id){
+
+            await Like.deleteMany({likeable:post,onModel:'Post'});
+
             post.remove();
 
             await Comment.deleteMany({post:req.params.id});

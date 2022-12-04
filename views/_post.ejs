@@ -39,7 +39,18 @@
         <div><img class="post-image" src="<%=post.postimg%>" alt=""></div></div>
     </div>
     <div class="post-footer">
-        <div class="post-icons"><button><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> </div>
+        <div class="post-icons">
+            <%if(locals.user){%>
+                <a href="/likes/toggle?id=<%=post._id%>&type=Post" style="color:black">
+                    <i class="fa-solid fa-thumbs-up fa-2xl" ></i><%=post.likes.length%>Like
+                </a>
+                
+              
+                <%}else{%>
+                   
+                    <button><%=post.likes.length%><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> 
+                    
+                    <%}%></div>
         <div class="post-icons" onclick="opencommets()"><i class="fa-regular fa-comment fa-2xl"></i> &nbsp;&nbsp;Comment &nbsp;</div>
         <div class="post-icons"><i class="fa-sharp fa-solid fa-share fa-2xl"></i>&nbsp;&nbsp; Share&nbsp; </div>
     </div>

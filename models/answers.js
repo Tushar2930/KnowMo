@@ -12,7 +12,13 @@ const answerSchema = new mongoose.Schema({
     question: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Question'
-    }
+    },
+    likes:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Like'
+        }
+    ]
 }, {
     timestamps: true
 });
