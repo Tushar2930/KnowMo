@@ -51,10 +51,10 @@
                     <button><%=post.likes.length%><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> 
                     
                     <%}%></div>
-        <div class="post-icons" onclick="opencommets()"><i class="fa-regular fa-comment fa-2xl"></i> &nbsp;&nbsp;Comment &nbsp;</div>
+        <div class="post-icons" onclick="opencommets(`<%=post.id%>`)"><i class="fa-regular fa-comment fa-2xl"></i> &nbsp;&nbsp;Comment &nbsp;</div>
         <div class="post-icons"><i class="fa-sharp fa-solid fa-share fa-2xl"></i>&nbsp;&nbsp; Share&nbsp; </div>
     </div>
-    <div id="commentpf"> <div>
+    <div id="<%=post._id%>" class="commentpf"> <div>
         <%if(locals.user){%>
         <form action="/comments/create" class="comment-form" method="POST">
             <div class="avatar">

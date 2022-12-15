@@ -38,8 +38,9 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-function opencommets(){
-  document.getElementById('commentpf').style.display = "block";
+function opencommets(id){
+  // console.log(id);
+  document.getElementById(id).style.display = "block";
 } 
 
 function editComments(e){
