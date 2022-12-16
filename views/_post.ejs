@@ -42,7 +42,12 @@
         <div class="post-icons">
             <%if(locals.user){%>
                 <a href="/likes/toggle?id=<%=post._id%>&type=Post" style="color:black">
-                    <i class="fa-solid fa-thumbs-up fa-2xl" ></i><%=post.likes.length%>Like
+                    <%if(post.likes.length){%>
+                    <i class="fa-solid fa-thumbs-up fa-2xl" style="color: blue;"></i>&nbsp;&nbsp;Liked
+                    <%}else{%>
+                        <i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;Like
+                        <%}%>
+                    
                 </a>
                 
               

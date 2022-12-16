@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const multer = require('multer');
+const { type } = require('os');
 const path = require('path');
 const AVATAR_path = path.join('/uploads/users/avatar');
 
@@ -25,7 +26,13 @@ const userSchema = new mongoose.Schema({
     },
     collegeName:{
         type:String,
-    }
+    },
+    starred:[
+       {
+         type:mongoose.Schema.Types.ObjectId,
+         ref:"Question"
+        }
+    ]
 }, {
     timestamps: true
 });

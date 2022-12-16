@@ -1,0 +1,41 @@
+<div>
+    
+<div class="container ans-cnt bg-grey">
+    <div style="background-color: white;" class="ans-left-col" style="width: 28%">
+    <h4>Questions</h4><hr>
+    <div class="left-col-ans" >
+    <a href="/questions"><h6>Questions for you</h6></a>
+    <a href="/questions/my-questions"><h6>Your Questions</h6></a>
+    <a href=""><h6>Starred</h6></a>
+</div>
+</div>
+
+
+
+
+
+    <div  class="ans-mid-col" style="width: 60%;">
+        <div style="    background-color: white;
+        padding: 1rem;
+        display: flex;
+        border-radius: 0.4rem;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;    margin-bottom: 2rem;"><h2 style="margin-bottom: 0px;">Starred Questions</h2></div>
+        
+        <div>
+            <%for(question of starq){%>
+                    <div style="background-color: white;
+                    padding: 1rem;
+                    margin: 1rem;
+                    border-radius: 0.4rem;">
+                    <a href="/answers/view/<%=question.id%>" style="color: black;"><h5><%=question.content%></h5>
+                        <small><%=question.answers.length%> Answers</small></a></div>
+                <%}%>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>

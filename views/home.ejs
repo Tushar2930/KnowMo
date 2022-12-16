@@ -50,8 +50,8 @@
                     <div class="input-2"> 
                         <ul class="icons">
                             <li class="icons-items">Photos</li>
-                            <li class="icons-items">Photos</li>
-                            <li class="icons-items">Photos</li>
+                            <li class="icons-items">Videos</li>
+                            <li class="icons-items">Post</li>
                         </ul>
                     </div>
                 </div>
@@ -66,23 +66,11 @@
                
             </div>
             <div class="right-side">
-                <div class="follow-head">People to follow</div>
+                <div class="follow-head">Trending News</div>
                 <div class="followers-container">
-                    <%for(user of all_users){%>
+                    <%for(data of newsdata){%>
                         <div class="follower-item">
-                            <div class="avatar-1 follower-image">
-                                <a href="/users/profile/<%=user.id%>">
-                                    <img class="avatar-1" src="<%=user.avatar%>" alt="username">
-                                </a>
-                            </div>
-                            <div class="post-heading follower-name">
-                                <div>
-                                <h5 style="font-size: 1rem;"><%=user.name %></h5>
-                                <small>Web devloper</small></div>
-                                  </div>
-                                  <div style="display: flex;
-                                  justify-content: center;
-                                  align-items: center;" class="follow-btn"><i class="fa-regular fa-plus add-btn"></i></div>
+                            <a href="<%=data.link%>" style="width: 85%;"><%=data.title%></a>
                         </div>
                         <%}%>
                 </div>

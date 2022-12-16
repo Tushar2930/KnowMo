@@ -72,3 +72,38 @@ module.exports.myQuestions=async function(req,res){
     }
    
 }
+
+module.exports.starred=async function(req,res){
+    try {
+        let user=await User.findById(req.user.id).populate('starred');
+
+        return res.render("starred_question",{
+            title:"Starred Questions",
+            starq:user.starred
+        })
+        
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+module.exports.markStar=async function(req,res){
+
+    try {
+        let user=await User.findById(req.user.id);
+        // console.log(user);
+        let exists=await User.findOne({starred:req.params.id});
+        if(!exists){
+            await user.starred.push(req.params.id);
+        user.save();
+        }
+        // console.log("already there",req.params._id);
+        
+        // console.log(user);
+        return res.redirect('/questions');
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
