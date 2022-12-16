@@ -65,12 +65,13 @@
                 
                
             </div>
-            <div class="right-side">
+            <div class="right-side" style="max-height: 95%;
+            height: fit-content;">
                 <div class="follow-head">Trending News</div>
                 <div class="followers-container">
-                    <%for(data of newsdata){%>
+                    <%for(var i=0;i<7;i++){%>
                         <div class="follower-item">
-                            <a href="<%=data.link%>" style="width: 85%;"><%=data.title%></a>
+                            <a href="<%=data[i].link%>" style="width: 85%;"><%=data[i].title%></a>
                         </div>
                         <%}%>
                 </div>

@@ -43,12 +43,13 @@ function opencommets(id){
   document.getElementById(id).style.display = "block";
 } 
 
-function editComments(e){
-  const data=document.getElementById("required-data").innerText;
-  console.log(data);
-  document.getElementById("cinpdata").value=data;
+
+function editComments(e,a){
+  const data=document.getElementsByClassName(e)[0].innerText;
+  // console.log(data);
+  document.getElementsByClassName(a)[0].value=data;
+  // console.log(a);
   document.getElementById(e).remove();
-  
 }
 
 function showall(){
@@ -60,3 +61,4 @@ function showall(){
 function hideQuestion(ei){
  document.getElementById(ei).style.display="none";
 }
+

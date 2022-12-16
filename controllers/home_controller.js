@@ -24,7 +24,7 @@ module.exports.home =async function (req, res) {
             title: "Home",
             posts: posts,
             all_users:users,
-            newsdata:data.data.results
+            data:data.data.results
             
         });
         // console.log(newsdata);

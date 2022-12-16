@@ -41,3 +41,6 @@ h6:hover {
   height: 100%;
   width: 23%;
   border-radius: 0.4rem; }
+
+.sm-btn:hover {
+  background-color: #edf0f4; }

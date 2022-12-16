@@ -19,12 +19,12 @@
                     width: 100%;" alt="">
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" onclick="editComments('<%=comment.id%>')" href="#">Edit</a>
+                  <a class="dropdown-item" onclick="editComments(`<%=comment.id%>`,`<%=post.id%>`)" href="#">Edit</a>
                   <a class="dropdown-item" href="/comments/destroy/<%=comment.id%>">Delete</a>
                 </div>
               </div>
               <%}%></div>
-        <div class="comment-data" id="required-data"><p><%=comment.content%></p></div>
+        <div class="comment-data <%=comment.id%>"><p><%=comment.content%></p></div>
 
     </div>
    

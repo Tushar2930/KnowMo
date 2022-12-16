@@ -46,8 +46,9 @@
 
 
 
-    <div style="background-color: white;" class="ans-right-col"><div class="follow-head">People to follow</div>
+    <div style="background-color: white;    height: fit-content;" class="ans-right-col"><div class="follow-head">People to follow</div>
     <div class="followers-container">
+       
         <%for(user of all_users){%>
             <div class="follower-item">
                 <div class="avatar-1 follower-image">
@@ -65,4 +66,9 @@
                       align-items: center;" class="follow-btn"><i class="fa-regular fa-plus add-btn"></i></div>
             </div>
             <%}%>
-    </div></div>
+    </div>
+<div style="display: flex;
+align-items: center;">
+    <h4 style="font-size: 1rem;padding: 0.3rem;margin: -0.5rem 0.7rem;
+    margin-bottom: 0.5rem;" class="sm-btn">Show More</h4>
+</div></div>
