@@ -1,4 +1,4 @@
-<div class="container profile-body">
+    <div class="container profile-body">
     <% if(user.id==profile_user.id){%>
 
         <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" style="    display: flex;
@@ -48,11 +48,17 @@
         </form>
 
         <%} else{%>
-            <p>
-                <%=profile_user.name %>
-            </p>
-            <p>
-                <%=profile_user.email %>
-            </p>
+            <div class="pro-root">
+                <div class="pro-bg-img">
+                    <div class="pro-bg-avatar"></div>
+                    <div class="pro-avatar"><img src="<%=profile_user.avatar%>" alt="<%=profile_user.name%>"></div>
+                </div>
+                    <div class="pro-name"><h4><%=profile_user.name%></h4>
+                    <h6><%=user.collegeName%> @ <%=user.year%></h6></div>
+                
+            </div>
+
+
+
             <%}%>
 </div>

@@ -1,0 +1,27 @@
+.pro-root {
+  width: 68%;
+  background-color: white;
+  border-radius: 1rem; }
+  .pro-root .pro-bg-img {
+    height: 25%;
+    width: 100%; }
+    .pro-root .pro-bg-img .pro-bg-avatar {
+      background-image: url("/images/backcover.png");
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem; }
+  .pro-root .pro-avatar img {
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    top: -5rem;
+    left: 3rem;
+    border-radius: 10rem;
+    border: 4px solid white; }
+  .pro-root .pro-name {
+    margin-top: 5rem;
+    padding: 1rem; }
+    .pro-root .pro-name h4 {
+      font-size: 2.5rem; }

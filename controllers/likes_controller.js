@@ -37,7 +37,7 @@ module.exports.toggleLike=async function(req,res){
             });
             // console.log(newLike);
             likeable.likes.push(newLike._id);
-            console.log(likeable);
+            // console.log(likeable);
             likeable.save();
             // console.log("custom",likeable);
         }

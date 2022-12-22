@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports.createSession = function (req, res) {
-    console.log(`/users/profile/${req.user.id}`);
+    // console.log(`/users/profile/${req.user.id}`);
     return res.redirect(`/users/profile/${req.user.id}`);
 }
 

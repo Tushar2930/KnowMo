@@ -1,0 +1,48 @@
+.pro-root{
+// background-color: black;
+// margin-top: 0rem;
+width: 68%;
+background-color: white;
+border-radius: 1rem;
+
+    .pro-bg-img{
+    //     
+    //     width: 100vw;
+    // height: 40vh;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // filter: blur(1px);
+    
+    height: 25%;
+    width: 100%;
+    
+
+    .pro-bg-avatar{
+        background-image: url("/images/backcover.png");
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    }
+    }
+    .pro-avatar{
+        // height: 100%;
+        img{
+            height: 10rem;
+            width: 10rem;
+            position: relative;
+            top: -5rem;
+            left: 3rem;
+            border-radius: 10rem;
+            border: 4px solid white;
+        }
+    }
+    .pro-name{
+        margin-top: 5rem;
+        padding: 1rem;
+        h4{
+            font-size: 2.5rem;
+        }
+    }
+    }
