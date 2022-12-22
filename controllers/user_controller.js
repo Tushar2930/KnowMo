@@ -49,17 +49,20 @@ module.exports.create = function (req, res) {
     });
 }
 
-module.exports.profile=function(req,res){
-    User.findById(req.params.id,(err,user)=>{
-        if(err){
-            console.log(err);
-            return;
-        }
-        return res.render('user_profile', {
-            title: "User Profile",
-            profile_user: user
-        })
-    })
+module.exports.profile=async function(req,res){
+
+    try {
+        let users=await User.find({});
+        let user=await User.findById(req.params.id)
+            return res.render('user_profile', {
+                title: "User Profile",
+                profile_user: user,
+                all_users:users
+            })
+        
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 module.exports.update=async function(req,res){
