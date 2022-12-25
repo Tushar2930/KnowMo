@@ -12,7 +12,7 @@ module.exports.toggleLike=async function(req,res){
             likeable=await Post.findById(req.query.id).populate('likes');
             
         }else{
-            likeable=await Comment.findById(req.query.id).populate('likes');
+            likeable=await Answer.findById(req.query.id).populate('likes');
         }
         
         let existingLike=await Like.findOne({
@@ -27,7 +27,7 @@ module.exports.toggleLike=async function(req,res){
             likeable.save();
             existingLike.remove();
             deleted=true;
-            console.log('here');
+            console.log(likeable,"*****");
         }
         else{
             let newLike= await Like.create({
@@ -42,7 +42,7 @@ module.exports.toggleLike=async function(req,res){
             // console.log("custom",likeable);
         }
         
-        return res.redirect('/');
+        return res.redirect('back');
         // console.log(req.query.id);
 
     } catch (error) {

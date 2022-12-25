@@ -47,14 +47,9 @@
                     <%}else{%>
                         <i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;Like
                         <%}%>
-                    
-                </a>
-                
-              
+                    </a>
                 <%}else{%>
-                   
-                    <button><%=post.likes.length%><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> 
-                    
+                   <button><%=post.likes.length%><i class="fa-solid fa-thumbs-up fa-2xl" ></i>&nbsp;&nbsp;&nbsp;Like&nbsp;</button> 
                     <%}%></div>
         <div class="post-icons" onclick="opencommets(`<%=post.id%>`)"><i class="fa-regular fa-comment fa-2xl"></i> &nbsp;&nbsp;Comment &nbsp;</div>
         <div class="post-icons"><i class="fa-sharp fa-solid fa-share fa-2xl"></i>&nbsp;&nbsp; Share&nbsp; </div>
